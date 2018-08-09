@@ -121,19 +121,9 @@ LF:4
 LH:3
 end_of_record
 TN:
-SF:t.cc
-FN:4,main
-FNDA:1,main
-FNF:1
-FNH:1
-DA:4,1
-DA:5,1
-DA:6,1
-LF:3
-LH:3
-end_of_record
 EOF
 
+  cat $CC_COVERAGE_OUTPUT_FILE
   diff result.dat "$CC_COVERAGE_OUTPUT_FILE" >> $TEST_log
   cmp result.dat "$CC_COVERAGE_OUTPUT_FILE" || fail "Coverage output file is different than the expected file"
 }
